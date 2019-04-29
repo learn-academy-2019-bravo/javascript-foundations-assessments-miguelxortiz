@@ -28,38 +28,48 @@ var helloMe = {
 console.log(helloMe.getData())
 
 // console.log();
-
+//
 // 3. Create an array of 5 grocery items. Write a function that returns the first, middle, and last item as a string.
 
-// var arr = ["milk", "eggs", "apples", "bananas", "chocolate"]
-//
-// const newArr = (array) => {
-//   let arr1= array.filter((value, index)=>{
-//     return value[0] && value[3] && value[5]
-//   })
-//   return arr1.join(" ")
-// }
-// console.log(newArr(arr))
+var arr = ["milk", "eggs", "apples", "bananas", "chocolate"]
+
+const newArr = (array) => {
+  let arr1= array.filter((value, index)=>{
+    return value[0] && value[3] && value[5]
+  })
+  return arr1.join(" ")
+}
+console.log(newArr(arr))
 
 // 4. Write a function called alphabetSoup that takes an argument of "str" and return a string with the letters in alphabetical order (ie. learn becomes aelnr).
 // Assume numbers and punctuation symbols will not be included in the parameter.
 
 const alphabetSoup = (str) => {
- let arr1= str.split('')
-  arr1.sort()
-  arr1.join('')
-
-console.log(arr1)
-
+ return str.toLowerCase().split('').sort().join("")
 }
 console.log(alphabetSoup("hello"))
 
 // 5. Given the arrays below, write a function animalNums that uses a for loop to print one value from each array concatenated together.
-
+//
 var nums = [9, 5, 88, 2, 5, 42, 57]
 
 var nouns = ["ducks", "elephants", "pangolin", "rhinoceros", "giraffes", "penguins", "llamas"]
 
+function animalNums(arr1,arr2){
+  let newArr = []
+  for(let i=0; arr1.length; i++)
+  for(let i=0; arr2.length; i++)
+  newArr.push(arr1[i], arr2[i])
+  }
+console.log(animalNums(nums,nouns))
+
+
 // output should be: "9 ducks", etc
 
 //6. Create an array of 5 numbers. Write a function that loops through the array and returns a new array of the numbers multiplied by 5.
+
+var arrOfNums = [1,2,3,4,5]
+
+let arrMult5 = arrOfNums.map(value=>value * 5)
+
+console.log(arrMult5);
